@@ -119,25 +119,22 @@ export default function Tasks() {
         <div className="tasks-list">
           {filteredTasks.map((task) => (
             <div key={task.id} className={`task-card ${task.status.toLowerCase()}`}>
-              <div className="task-info-left">
-                <span className={`status-dot ${task.status.toLowerCase()}`}></span>
-                <h3 className={task.status === 'Completed' ? 'text-strikethrough' : ''}>{task.title}</h3>
+              <div className="task-content">
+                <h3 className={task.status === 'Completed' ? 'completed-text' : ''}>
+                  {task.title}
+                </h3>
               </div>
               
-              <div className="task-actions-right">
-                <span className={`status-label ${task.status.toLowerCase()}`}>
-                  {task.status}
-                </span>
-                <div className="action-divider"></div>
+              <div className="task-actions">
                 <button
                   onClick={() => handleToggleStatus(task.id)}
-                  className="action-btn ghost"
+                  className={`pill-btn ${task.status === 'Pending' ? 'pill-success' : 'pill-warning'}`}
                 >
-                  {task.status === 'Pending' ? 'Mark Done' : 'Reopen'}
+                  {task.status === 'Pending' ? 'Mark Completed' : 'Mark Pending'}
                 </button>
                 <button
                   onClick={() => handleDeleteTask(task.id)}
-                  className="action-btn ghost-danger"
+                  className="pill-btn pill-danger-outline"
                 >
                   Delete
                 </button>
