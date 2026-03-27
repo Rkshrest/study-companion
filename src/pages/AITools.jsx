@@ -183,7 +183,7 @@ To master this topic, try different learning approaches: read textbooks, watch e
                 Generating...
               </>
             ) : (
-              '✨ Generate'
+              'Generate'
             )}
           </button>
         </div>
@@ -204,7 +204,7 @@ To master this topic, try different learning approaches: read textbooks, watch e
                 <span></span>
                 <span></span>
               </div>
-              <p>🧠 AI is analyzing your question...</p>
+              <p>AI is analyzing your question...</p>
             </div>
           </div>
         )}
@@ -213,7 +213,7 @@ To master this topic, try different learning approaches: read textbooks, watch e
         {summary && !loading && (
           <div className="summary-box enhanced-summary">
             <div className="summary-header">
-              <h4>✅ Summary for "<span className="topic-highlight">{topic}</span>"</h4>
+              <h4>Summary for "<span className="topic-highlight">{topic}</span>"</h4>
               <span className="ai-badge">AI Generated</span>
             </div>
             <div className="summary-content">
@@ -227,7 +227,7 @@ To master this topic, try different learning approaches: read textbooks, watch e
                 }}
                 className="btn btn-secondary"
               >
-                🔄 Ask Another Topic
+                Ask Another Topic
               </button>
               <button
                 onClick={() => {
@@ -241,7 +241,7 @@ To master this topic, try different learning approaches: read textbooks, watch e
                 }}
                 className="btn btn-success"
               >
-                💾 Download Summary
+                Download Summary
               </button>
             </div>
           </div>

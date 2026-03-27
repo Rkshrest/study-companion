@@ -118,7 +118,7 @@ a {
 
 /* ===== Container & Layout ===== */
 .container {
-  max-width: 1000px;
+  max-width: 850px;
   margin: 3rem auto;
   padding: 0 1.5rem;
   animation: fadeIn 0.5s ease-out;
@@ -131,10 +131,10 @@ a {
 
 /* ===== Button Styles ===== */
 .btn {
-  padding: 0.75rem 1.5rem;
+  padding: 0.6rem 1rem;
   border: 1px solid transparent;
   border-radius: var(--radius-md);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   cursor: pointer;
   font-weight: 500;
   transition: var(--transition-smooth);
@@ -177,23 +177,23 @@ a {
 }
 
 .btn-success {
-  background: var(--success);
-  color: white;
-  box-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.2);
+  background: var(--success-bg);
+  color: var(--success);
+  border: 1px solid rgba(16, 185, 129, 0.2);
 }
 
 .btn-success:hover {
-  background: #059669;
+  background: rgba(16, 185, 129, 0.2);
 }
 
 .btn-warning {
-  background: var(--warning);
-  color: #0b0f19;
-  font-weight: 600;
+  background: var(--warning-bg);
+  color: var(--warning);
+  border: 1px solid rgba(245, 158, 11, 0.2);
 }
 
 .btn-warning:hover {
-  background: #d97706;
+  background: rgba(245, 158, 11, 0.2);
 }
 
 .btn-danger {
@@ -470,9 +470,9 @@ h2 {
 
 .task-card {
   background: var(--bg-elevated);
-  padding: 1.25rem 1.5rem;
+  padding: 1rem 1.2rem;
   border-radius: var(--radius-md);
-  border: 1px solid var(--border-subtle);
+  border: 1px solid transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -755,9 +755,9 @@ h2 {
 
 .tips-section ul {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
 .tips-section li {
