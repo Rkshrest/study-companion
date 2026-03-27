@@ -248,20 +248,6 @@ To master this topic, try different learning approaches: read textbooks, watch e
         )}
       </div>
 
-      {/* Tips Section */}
-      <div className="ai-tips-container">
-        <div className="tips-section tips-usage">
-          <h3>Tips for Best Results</h3>
-          <ul>
-            <li>Be specific and detailed with your topic</li>
-            <li>Use the AI summaries as study guides combined with textbooks</li>
-            <li>Try asking follow-up questions about the same topic</li>
-            <li>Use the download feature to save summaries for later</li>
-            <li>Break down complex topics into smaller questions</li>
-            <li>Always verify facts with official sources</li>
-          </ul>
-        </div>
-      </div>
     </div>
   );
 }
