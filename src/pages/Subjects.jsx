@@ -45,7 +45,7 @@ export default function Subjects() {
 
   return (
     <div className="subjects">
-      <h2>📚 Subjects</h2>
+      <h2>Subjects</h2>
 
       <div className="input-section">
         <input

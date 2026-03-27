@@ -71,7 +71,7 @@ export default function Tasks() {
 
   return (
     <div className="tasks">
-      <h2>✅ Tasks</h2>
+      <h2>Tasks</h2>
 
       <div className="input-section">
         <input

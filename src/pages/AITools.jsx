@@ -151,12 +151,12 @@ To master this topic, try different learning approaches: read textbooks, watch e
 
   return (
     <div className="ai-tools">
-      <h2>🤖 AI Study Companion</h2>
+      <h2>AI Study Companion</h2>
 
       <div className="ai-section">
         <div className="ai-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div>
-            <h3>📝 Generate AI-Powered Summary</h3>
+            <h3>Generate AI-Powered Summary</h3>
             <p className="description">Ask about any topic and get instant, intelligent explanations!</p>
           </div>
           {useRealApi && <span className="status-badge completed" style={{ height: 'fit-content' }}>Live API Active</span>}
@@ -251,14 +251,14 @@ To master this topic, try different learning approaches: read textbooks, watch e
       {/* Tips Section */}
       <div className="ai-tips-container">
         <div className="tips-section tips-usage">
-          <h3>✨ Tips for Best Results</h3>
+          <h3>Tips for Best Results</h3>
           <ul>
-            <li>✓ Be specific and detailed with your topic</li>
-            <li>✓ Use the AI summaries as study guides combined with textbooks</li>
-            <li>✓ Try asking follow-up questions about the same topic</li>
-            <li>✓ Use the download feature to save summaries for later</li>
-            <li>✓ Break down complex topics into smaller questions</li>
-            <li>✓ Always verify facts with official sources</li>
+            <li>Be specific and detailed with your topic</li>
+            <li>Use the AI summaries as study guides combined with textbooks</li>
+            <li>Try asking follow-up questions about the same topic</li>
+            <li>Use the download feature to save summaries for later</li>
+            <li>Break down complex topics into smaller questions</li>
+            <li>Always verify facts with official sources</li>
           </ul>
         </div>
       </div>

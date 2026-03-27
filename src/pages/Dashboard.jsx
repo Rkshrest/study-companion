@@ -1,5 +1,5 @@
-// Dashboard.jsx - Shows study statistics
 import { useState, useEffect } from 'react';
+import Calendar from '../components/Calendar';
 
 export default function Dashboard() {
   const [stats, setStats] = useState({
@@ -47,38 +47,34 @@ export default function Dashboard() {
 
   return (
     <div className="dashboard">
-      <h2>📊 Dashboard</h2>
-      
-      <div className="stats-container">
-        <div className="stat-card">
-          <h3>📚 Total Subjects</h3>
-          <p className="stat-number">{stats.totalSubjects}</p>
+      <h2>Dashboard</h2>
+
+      <div className="dashboard-layout">
+        <div className="stats-container">
+          <div className="stat-card">
+            <h3>Total Subjects</h3>
+            <p className="stat-number">{stats.totalSubjects}</p>
+          </div>
+
+          <div className="stat-card">
+            <h3>Total Tasks</h3>
+            <p className="stat-number">{stats.totalTasks}</p>
+          </div>
+
+          <div className="stat-card completed">
+            <h3>Completed Tasks</h3>
+            <p className="stat-number">{stats.completedTasks}</p>
+          </div>
+
+          <div className="stat-card pending">
+            <h3>Pending Tasks</h3>
+            <p className="stat-number">{stats.pendingTasks}</p>
+          </div>
         </div>
 
-        <div className="stat-card">
-          <h3>📋 Total Tasks</h3>
-          <p className="stat-number">{stats.totalTasks}</p>
+        <div className="dashboard-side">
+          <Calendar />
         </div>
-
-        <div className="stat-card completed">
-          <h3>✅ Completed Tasks</h3>
-          <p className="stat-number">{stats.completedTasks}</p>
-        </div>
-
-        <div className="stat-card pending">
-          <h3>⏳ Pending Tasks</h3>
-          <p className="stat-number">{stats.pendingTasks}</p>
-        </div>
-      </div>
-
-      <div className="dashboard-info">
-        <h3>Welcome to Your Study Companion! 🎓</h3>
-        <p>Track your subjects, manage your tasks, and use AI tools to boost your learning.</p>
-        <ul>
-          <li>➕ Add subjects in the <strong>Subjects</strong> page</li>
-          <li>✏️ Create tasks in the <strong>Tasks</strong> page</li>
-          <li>🤖 Use AI-powered summaries in the <strong>AI Tools</strong> page</li>
-        </ul>
       </div>
     </div>
   );
