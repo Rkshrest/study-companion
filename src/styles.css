@@ -549,7 +549,7 @@ h2 {
 
 .task-card {
   background: var(--bg-elevated);
-  padding: 1rem 1.2rem;
+  padding: 1rem 1.25rem;
   border-radius: var(--radius-md);
   border: 1px solid transparent;
   display: flex;
@@ -559,81 +559,108 @@ h2 {
 }
 
 .task-card:hover {
-  border-color: var(--border-strong);
-  background: rgba(30, 38, 60, 0.8);
+  border-color: var(--border-subtle);
+  background: rgba(30, 38, 60, 0.4);
 }
 
-.task-content {
-  flex: 1;
+.task-info-left {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
-.task-card h3 {
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status-dot.pending {
+  background: var(--warning);
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.4);
+}
+
+.status-dot.completed {
+  background: var(--text-muted);
+}
+
+.task-info-left h3 {
   color: var(--text-primary);
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 500;
-  transition: var(--transition-smooth);
 }
 
-.task-card.completed {
-  opacity: 0.8;
-}
-
-.task-card.completed h3 {
+.text-strikethrough {
   text-decoration: line-through;
-  color: var(--text-muted);
+  color: var(--text-muted) !important;
 }
 
-.status-badge {
-  display: inline-flex;
+.task-actions-right {
+  display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 1rem;
+}
+
+.status-label {
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  background: transparent !important;
-  border: none !important;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
 }
 
-.status-badge.pending {
+.status-label.pending {
   color: var(--warning);
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.15);
 }
 
-.status-badge.completed {
+.status-label.completed {
   color: var(--success);
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.15);
 }
 
-.task-actions {
-  display: flex;
-  gap: 1rem;
+.action-divider {
+  width: 1px;
+  height: 1.5rem;
+  background: var(--border-subtle);
+  margin: 0 0.25rem;
 }
 
-.task-actions .btn {
-  font-size: 0.85rem;
-  padding: 0;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
+.action-btn {
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-smooth);
+  font-family: var(--font-sans);
+  font-weight: 500;
+}
+
+.action-btn.ghost {
+  background: transparent;
   color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
 }
 
-.task-actions .btn:hover {
+.action-btn.ghost:hover {
+  background: var(--bg-surface);
   color: var(--text-primary);
-  text-decoration: underline;
+  border-color: var(--border-strong);
 }
 
-.task-actions .btn-success {
-  color: var(--success);
+.action-btn.ghost-danger {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid transparent;
 }
-.task-actions .btn-warning {
-  color: var(--warning);
-}
-.task-actions .btn-danger {
+
+.action-btn.ghost-danger:hover {
   color: var(--danger);
+  background: rgba(239, 68, 68, 0.1);
 }
 
 /* ===== AI Tools Page ===== */
